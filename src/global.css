@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Zen+Dots&display=swap');
+
+html{
+    background: #132A13;
+    color: #ECF39E;
+    font-family: 'Space Mono', sans-serif;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    padding-left: 1.5rem;
+    padding-top: 0rem;
+    margin-top: 0rem;
+    font-family: 'Zen Dots', sans-serif;
+    font-size: 5rem;
+}
+
+/* header stuff */
+
+#header_text{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+header{
+    background: #31572C;
+}
+
+.header_links{
+    text-align: center;
+    font-family: 'Zen Dots', sans-serif;
+    font-size: 3rem;
+    margin-top: 0rem;
+    padding-top: 0rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding-bottom: 1rem;
+}
+
+.header_links a{
+    text-decoration: none !important;
+}
+
+.header_links a:link{
+    color: #ECF39E;
+}
+
+.header_links a:visited{
+    color: #ECF39E;
+}
+
+.header_links a:hover{
+    color: #90A955;
+}
+
+.header_links a:active{
+    color: #90A955;
+}
+
+
+
+
+
