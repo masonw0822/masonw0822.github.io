@@ -1,10 +1,79 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro'
-import '../global.css'
+import '../global.css';
+
+const projects = [
+    { title: "portfolio website", image: "/vscode.png", description: "", date: "4/7/26"},
+	{ title: "watering can't", image: "/watering cant.JPEG", description: "", date: "3/31/26"},
+    { title: "minecraft house", image: "/house_with_sunset.jpeg", description: "Details about project two...", date: "3/28/26"},
+    { title: "random photos", image: "/alley.jpeg", description: "", date: "3/23/26"},
+	{ title: "wooden box", image: "/box1.png", description: "", date: "3/10/26"},
+	{ title: "25-26 VEX season", image: "/IMG_0853.JPG", description: "", date: "3/1/26"},
+	{ title: "andor ost pieces", image: "/andormusic.png", description: "", date: "1/29/26"},
+	{ title: "clay bowl", image: "/IMG_0130.png", description: "", date: "12/19/25"},
+];
 ---
 
-<Layout>
-	<Header />
-	<h1>pootfoolio</h1>
+<Layout pageTitle="projects">
+	<style>
+		*{
+			user-select: none;
+		}
+	</style>
+    <div id="grid">
+        {projects.map((project, i) => (
+            <div class="card" data-index={i}>
+                <img src={project.image} alt={project.title}/>
+                <h3>{project.title}</h3>
+				<p>{project.date}</p>
+            </div>
+        ))}
+    </div>
+
+    <div id="modal" class="hidden">
+        <div id="modal-content">
+            <button id="close">✕</button>
+            <img id="modal-img" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
 </Layout>
+
+<script>
+    const projects = [
+        { title: "portfolio website", image: "/vscode.png", description: "in february, through the internet, i started learning the basics of front-end web development html, css, and javascript. in march, i began building this portfolio based on astro.js." },
+		{ title: "watering can't", image: "/watering cant 2.png", description: "for the last day of break i wanted to do something fun and refresh my CAD skills, so i made this stupid watering can in autodesk fusion and rendered it." },
+        { title: "minecraft house", image: "/house_closeup_sunset.jpeg", description: "last spring break, i got minecraft and started experimenting. i was inspired by some homes in cape cod and wanted to build something colorful." },
+        { title: "random photos", image: "/flowar.png", description: "was bored and wanted to play around with photoshop using some old photos i took. the one above is a bit blurry, but i really like the colors and subject." },
+		{ title: "wooden box", image: "/box1.png", description: "my second semester elective was woodworking, and this box was my first project. i had a lot of fun putting it together from scratch, and i'm really happy with the result." },
+		{ title: "25-26 VEX season", image: "/IMG_0228.png", description: "this season was my second, building and programming for a two-person team competing in high school. although we didn't make the world championships, we both learned a lot, and we had some great moments against good teams." },
+		{ title: "andor ost pieces", image: "/andormusic.png", description: "i really enjoyed star wars: andor's soundtrack (the show is really good too!) so, i made some sheet music so i could play it on the piano (one of which i arranged and the other is converted from a synesthesia piano tutorial) in musescore." },
+		{ title: "clay bowl", image: "/IMG_0130.png", description: "for my first semester elective, i had ceramics and sculpture. at the end, i ended up with this sky-blue bowl that i threw on the wheel, which i'm pretty proud of." },
+    ];
+
+    const modal = document.getElementById("modal") as HTMLElement;
+    const modalImg = document.getElementById("modal-img") as HTMLImageElement;
+    const modalTitle = document.getElementById("modal-title") as HTMLElement;
+    const modalDesc = document.getElementById("modal-desc") as HTMLElement;
+
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("click", () => {
+            const i = (card as HTMLElement).dataset.index;
+            const p = projects[Number(i)];
+            modalImg.src = p.image;
+            modalImg.alt = p.title;
+            modalTitle.textContent = p.title;
+            modalDesc.textContent = p.description;
+            modal.classList.remove("hidden");
+        });
+    });
+
+    document.getElementById("close")?.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.add("hidden");
+    });
+</script>

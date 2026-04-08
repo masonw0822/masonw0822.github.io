@@ -1,10 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro'
-import '../global.css'
+import '../global.css';
+
 ---
 
-<Layout>
-	<Header />
-	<h1> six seven </h1>
+<Layout pageTitle = { "home" }>
+	<style>
+		*{
+			user-select: none;
+		}
+	</style>
+	<div id="carousel">
+	<h1 id = "homepage_greeting">hi! i'm</h1>
+	<h1 id = "homepage_main">mason wu</h1>
+    <p id="carousel-text">student</p>
+	</div>
+
+	<script>
+    	const slides = [
+			{ text: "student" },
+      		{ text: "engineer" },
+			{ text: "programmer" },
+        	{ text: "musician" },
+        	{ text: "runner" },
+			{ text: "photographer" },
+			{ text: "writer" },
+			{ text: "professional procrastinator" }
+    	];
+
+		let current = 0;
+		const text = document.getElementById("carousel-text") as HTMLElement;
+
+	setInterval(() => {
+    	text.style.opacity = '0';
+    	setTimeout(() => {
+        	current = (current + 1) % slides.length;
+        	text.textContent = slides[current].text;
+        	text.style.opacity = '1';
+    	}, 400); // matches transition duration
+	}, 2000);
+	</script>
+
+	<div id = "quote">
+		<p>"I have not failed. I've just found 10,000 ways that won't work."</p>
+		<p id = "quote_author">- Thomas Edison</p>
+	</div>
 </Layout>

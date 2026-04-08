@@ -1,10 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro'
-import '../global.css'
+import '../global.css';
 ---
 
-<Layout>
-	<Header />
-	<h1>aboot</h1>
+<Layout  pageTitle = { "about" }>
+	<figure>
+		<img id = "about_image" src = "/IMG_0452.jpeg" alt = "myself">
+	</figure>
+	<div id = "about_text">
+		<p>hey! i'm mason wu, a seventh grader attending the fessenden school. i am interested in engineering, computer science, photography, and music. i love traveling to unique places, hiking across pretty landscapes, long runs, and making things i am proud of.</p>
+		<p>lately, i've been building this website, experimenting with photoshop, learning to draw, and getting into hand-tool woodworking.</p>
+		<p>this summer, i plan to start a few new projects, like building a 3d printer from scratch, getting back into origami model design, and painting some warhammer figurines.</p>
+		<p>in my free time, you can catch me somewhere between building robots and procrastinating on the couch.</p>
+	</div>
+
+	<hr>
+
+	<div id = "extracurriculars">
+		<h2>extracurriculars & distinctions</h2>
+		<img src="/IMG_0530.JPG" alt="my robot" width="25%" style="float: right; margin: 0 16px 8px 0; border-radius: 35px">
+		<ul>
+			<li>1x VEX robotics middle school world championship qualification</li>
+			<li>1x VEX robotics high school state championship qualification</li>
+			<li>92nd percentile on 2026 AMC8</li>
+			<li>1x perfect score on the NLE beginning latin reading comprehension exam and 1x summa cum laude on the NLE introduction to latin exam</li>
+			<li>1864 day duolingo streak (as of april 4, 2026)</li>
+			<li>school academic honor roll</li>
+			<li>proficient in multiple CAD softwares, mainly autodesk fusion and onshape</li>
+			<li>performed the piano and violin at various small concerts, experience arranging music with musescore</li>
+			<li>2x varsity cross-country and track</li>
+			<li>familiar with java, c++, html, css, javascript, and astro</li>
+			<li>intern at fessenden's innovation lab, math club member, and layout team member at school newspaper</li>
+			<li>experienced with multiple graphic design and digital media softwares, including inkscape, adobe photoshop, adobe illustrator, and adobe indesign</li>
+		</ul>
+	</div>
+
+
 </Layout>
