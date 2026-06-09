@@ -273,7 +273,7 @@ h2{
     color: #ECF39E;
 }
 
-.portfolio_link { text-decoration: none !important; font-style: italic; font-weight: bold;}
+.portfolio_link { text-decoration: none !important; font-style: italic; font-weight: bold; color: #ECF39E;}
 .portfolio_link link { color: #ECF39E; }
 .portfolio_link:visited { color: #ECF39E; }
 .portfolio_link:hover { color: #90A955; }
