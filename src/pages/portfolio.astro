@@ -3,16 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import '../global.css';
 
 const projects = [
-    { title: "san diego trip", image: "/IMG_0988.jpeg", description: "", date: "6/8/26"},
-    { title: "VEX worlds 2026", image: "/streettwo.jpeg", description: "", date: "4/24/26"},
+    { title: "san diego trip", image: "/going.jpeg", description: "", date: "6/8/26"},
+    { title: "handcarved spoon", image: "/wooden_spoon.jpeg", description: "", date: "5/29/26"},
+    { title: "st louis photos", image: "/streettwo.jpeg", description: "", date: "4/24/26"},
     { title: "portfolio website", image: "/vscode.png", description: "", date: "4/7/26"},
 	{ title: "watering can't", image: "/watering cant.JPEG", description: "", date: "3/31/26"},
     { title: "minecraft house", image: "/house_with_sunset.jpeg", description: "Details about project two...", date: "3/28/26"},
     { title: "random photos", image: "/alley.jpeg", description: "", date: "3/23/26"},
 	{ title: "wooden box", image: "/box1.png", description: "", date: "3/10/26"},
-	{ title: "25-26 VEX season", image: "/IMG_0853.JPG", description: "", date: "3/1/26"},
+	{ title: "25-26 VEX season", image: "/states_one.JPG", description: "", date: "3/1/26"},
 	{ title: "andor ost pieces", image: "/andormusic.png", description: "", date: "1/29/26"},
-	{ title: "clay bowl", image: "/IMG_0130.png", description: "", date: "12/19/25"},
+	{ title: "clay bowl", image: "/bowl.png", description: "", date: "12/19/25"},
 ];
 ---
 
@@ -44,16 +45,17 @@ const projects = [
 
 <script>
     const projects = [
-        { title: "san diego trip", image: "/IMG_0794.jpeg", description: 'my favorite photos that i took in san diego (using a canon eos r50). <br><br><a class="portfolio_link" href="https://flic.kr/s/aHBqjCW7jC" target="_blank" rel="noopener noreferrer"> view album </a>' },
-        { title: "VEX worlds 2026", image: "/domeone.jpeg", description: 'in may, i had the extremely fortunate chance to travel with a local team to the VEX world championships. here are some selected photos i took with a borrowed camera (the sony a6000). <br><br><a class="portfolio_link" href="https://flic.kr/s/aHBqjCW5M8" target="_blank" rel="noopener noreferrer"> view album </a>' },
+        { title: "san diego trip", image: "/cloudy_sunset.jpeg", description: 'my favorite photos that i took in san diego (using a canon eos r50). <br><br><a class="portfolio_link" href="https://flic.kr/s/aHBqjCW7jC" target="_blank" rel="noopener noreferrer"> view album </a>' },
+        { title: "handcarved spoon", image: "/wooden_spoon.jpeg", description: 'this is my second project for my second semester elective, woodworking. i made it from cherry wood and shaped it with various gouges and a shinto rasp.' },
+        { title: "st louis photos", image: "/domeone.jpeg", description: 'in may, i had the extremely fortunate chance to travel with a local team to the VEX world championships in st louis. here are some selected photos i took with a borrowed camera (the sony a6000). <br><br><a class="portfolio_link" href="https://flic.kr/s/aHBqjCW5M8" target="_blank" rel="noopener noreferrer"> view album </a>' },
         { title: "portfolio website", image: "/vscode.png", description: 'in february, through the internet, i started learning the basics of front-end web development html, css, and javascript. in march, i began building this portfolio based on astro.js.' },
 		{ title: "watering can't", image: "/watering cant 2.png", description: 'for the last day of break i wanted to do something funny, so i made this stupid watering can in autodesk fusion and rendered it.' },
         { title: "minecraft house", image: "/house_closeup_sunset.jpeg", description: 'last spring break, i got minecraft and started experimenting. i was inspired by some homes in cape cod and wanted to build something colorful.' },
         { title: "random photos", image: "/flowar.png", description: 'was bored and wanted to play around with photoshop using some old photos i took. the one above is a bit blurry, but i really like the colors and subject.' },
 		{ title: "wooden box", image: "/box1.png", description: 'my second semester elective was woodworking, and this box was my first project. i had a lot of fun putting it together from scratch, and i am really happy with the result.' },
-		{ title: "25-26 VEX season", image: "/IMG_0228.png", description: 'this season was my second, building and programming for a two-person team competing in high school. although we did not make the world championships, we both learned a lot, and we had some great moments against good teams.' },
+		{ title: "25-26 VEX season", image: "/countdown.png", description: 'this season was my second, building and programming for a two-person team competing in high school. although we did not make the world championships, we both learned a lot, and we had some great moments against good teams.' },
 		{ title: "andor ost pieces", image: "/andormusic.png", description: 'i really enjoyed the star wars: andor soundtrack (the show is really good too!) so, i made some sheet music so i could play it on the piano (one of which i arranged and the other is converted from a synesthesia piano tutorial) in musescore.' },
-		{ title: "clay bowl", image: "/IMG_0130.png", description: 'for my first semester elective, i had ceramics and sculpture. at the end, i ended up with this sky-blue bowl that i threw on the wheel, which i am pretty proud of.' },
+		{ title: "clay bowl", image: "/bowl.png", description: 'for my first semester elective, i had ceramics and sculpture. at the end, i ended up with this sky-blue bowl that i threw on the wheel, which i am pretty proud of.' },
     ];
 
     const modal = document.getElementById("modal") as HTMLElement;
